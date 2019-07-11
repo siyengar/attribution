@@ -1,5 +1,5 @@
-This is a test site for the [PPCA|https://webkit.org/blog/8943/privacy-preserving-ad-click-attribution-for-the-web/] proposal by webkit. This spawns a local server which we can hit using
-safari developer preview.
+This is a test site for the PPCA proposal by webkit https://webkit.org/blog/8943/privacy-preserving-ad-click-attribution-for-the-web/. 
+This spawns a local server which we can hit using safari developer preview.
 
 Prerequisites
 -------------
