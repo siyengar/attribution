@@ -1,0 +1,28 @@
+This is a test site for the PPCA proposal by webkit. This spawns a local server which we can hit using
+safari developer preview.
+
+Prerequisites
+-------------
+
+* Install nodejs using your favorite package manager
+* Install safari developer preview and enable the ad click attribution feature as well as the debug feature.
+  https://webkit.org/blog/8943/privacy-preserving-ad-click-attribution-for-the-web/
+* Clone this repository
+
+Using the localserver
+---------------------
+
+* First generate certificates for your server in this repo directory
+
+openssl req -x509 -nodes -days 30 -newkey rsa:2048 -keyout key.pem -out certificate.pem -config req.conf -extensions 'v3_req'
+
+* Add the following lines to the beginning of your /etc/hosts file
+
+127.0.0.1 search.example
+127.0.0.1 shop.example
+
+* Start the node server
+
+node server.js
+
+* Restart safari and visit https://search.example
