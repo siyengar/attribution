@@ -1,4 +1,4 @@
-This is a test site for the PPCA proposal by webkit. This spawns a local server which we can hit using
+This is a test site for the [PPCA|https://webkit.org/blog/8943/privacy-preserving-ad-click-attribution-for-the-web/] proposal by webkit. This spawns a local server which we can hit using
 safari developer preview.
 
 Prerequisites
@@ -15,6 +15,10 @@ Using the localserver
 * First generate certificates for your server in this repo directory
 
 openssl req -x509 -nodes -days 30 -newkey rsa:2048 -keyout key.pem -out certificate.pem -config req.conf -extensions 'v3_req'
+
+* Add certificate.pem to your keychain and double click to trust it
+
+For example like in https://tosbourn.com/getting-os-x-to-trust-self-signed-ssl-certificates/
 
 * Add the following lines to the beginning of your /etc/hosts file
 
