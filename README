@@ -1,6 +1,8 @@
 This is a test site for the PPCA proposal by webkit https://webkit.org/blog/8943/privacy-preserving-ad-click-attribution-for-the-web/. 
 This spawns a local server which we can hit using safari developer preview.
 
+This is intended as a toy project to test various edge cases around PPCA to understand it better and see which parts are unspecified.
+
 Prerequisites
 -------------
 
@@ -30,3 +32,11 @@ For example like in https://tosbourn.com/getting-os-x-to-trust-self-signed-ssl-c
 node server.js
 
 * Restart safari and visit https://search.example
+
+Findings so far
+---------------
+* Safari does not support custom ports in the conversion redirect url even if the main site loads on a custom port.
+* Safari does not support altsvc so the interaction between reporting and altsvc is not specified
+* Safari loads each link on its own connection
+* Surprisingly the design requires the publisher to specify attribution data, however the advertiser more likely 
+  has more knowledge about the conversion and the value of the conversion.
