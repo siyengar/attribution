@@ -29,7 +29,7 @@ For example like in https://tosbourn.com/getting-os-x-to-trust-self-signed-ssl-c
 
 * Start the node server
 
-node server.js
+node search.js
 
 * Restart safari and visit https://search.example
 
